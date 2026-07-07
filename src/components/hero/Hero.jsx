@@ -1,3 +1,4 @@
+import SearchBar from "./SearchBar";
 function Hero() {
   return (
     <section className="mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
@@ -24,7 +25,7 @@ function Hero() {
         PDF, image, AI and study tools — beautifully designed,
         lightning fast, and built for modern work.
       </p>
-
+<SearchBar />
     </section>
   );
 }
