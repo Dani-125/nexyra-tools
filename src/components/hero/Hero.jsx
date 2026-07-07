@@ -1,3 +1,4 @@
+import Stats from "./Stats";
 import SearchBar from "./SearchBar";
 function Hero() {
   return (
@@ -26,6 +27,17 @@ function Hero() {
         lightning fast, and built for modern work.
       </p>
 <SearchBar />
+<div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+  <button className="rounded-xl bg-violet-600 px-8 py-4 font-semibold text-white transition duration-300 hover:scale-105 hover:bg-violet-500">
+    Explore All Tools
+  </button>
+
+  <button className="rounded-xl border border-slate-700 bg-slate-900 px-8 py-4 font-semibold text-slate-200 transition duration-300 hover:border-violet-500 hover:text-white">
+    Try AI Tools
+  </button>
+<Stats />
+</div>
     </section>
   );
 }
