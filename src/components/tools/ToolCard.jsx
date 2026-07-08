@@ -1,4 +1,4 @@
-function ToolCard({ icon: Icon, title }) {
+function ToolCard({ icon: Icon, title, description }) {
   return (
     <div
       className="
@@ -42,9 +42,15 @@ function ToolCard({ icon: Icon, title }) {
         <Icon />
       </div>
 
-      <h3 className="mt-5 text-white text-lg font-semibold text-center">
-        {title}
-      </h3>
+     <div className="mt-5">
+  <h3 className="text-lg font-semibold text-white">
+    {title}
+  </h3>
+
+  <p className="mt-2 text-sm text-slate-400">
+    {description}
+  </p>
+</div>
     </div>
   );
 }
