@@ -1,7 +1,7 @@
-import Categories from "./components/tools/Categories";
-import PopularTools from "./components/tools/PopularTools";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/hero/Hero";
+import PopularTools from "./components/tools/PopularTools";
+import AllTools from "./components/tools/AllTools";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <PopularTools />
-      <Categories />
+      <AllTools />
     </div>
   );
 }

@@ -53,7 +53,32 @@ export const popularTools = [
 ];
 export const mostUsedTools = [];
 
-export const pdfTools = [];
+export const pdfTools = [
+  {
+    id: 101,
+    title: "Merge PDF",
+    description: "Combine PDF files.",
+    icon: FiFileText,
+  },
+  {
+    id: 102,
+    title: "Split PDF",
+    description: "Split PDF pages.",
+    icon: FiFileText,
+  },
+  {
+    id: 103,
+    title: "Compress PDF",
+    description: "Reduce PDF size.",
+    icon: FiFileText,
+  },
+  {
+    id: 104,
+    title: "PDF to Word",
+    description: "Convert PDF to Word.",
+    icon: FiFileText,
+  },
+];
 
 export const imageTools = [];
 
