@@ -1,3 +1,4 @@
+import Categories from "./components/tools/Categories";
 import PopularTools from "./components/tools/PopularTools";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/hero/Hero";
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <PopularTools />
+      <Categories />
     </div>
   );
 }

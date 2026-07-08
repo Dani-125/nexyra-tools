@@ -2,7 +2,7 @@ import Stats from "./Stats";
 import SearchBar from "./SearchBar";
 function Hero() {
   return (
-    <section className="mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
+    <section className="mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-6 pb-32 text-center">
 
       {/* Badge */}
 
