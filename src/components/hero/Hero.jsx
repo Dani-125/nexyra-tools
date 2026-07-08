@@ -2,7 +2,16 @@ import Stats from "./Stats";
 import SearchBar from "./SearchBar";
 function Hero() {
   return (
-    <section className="mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-6 pb-32 text-center">
+    <section className="relative overflow-hidden pb-32">
+
+        {/* Background Glow */}
+<div className="absolute left-[-150px] top-[-120px] h-[400px] w-[400px] rounded-full bg-violet-600/20 blur-[120px]" />
+
+<div className="absolute right-[-150px] top-[100px] h-[350px] w-[350px] rounded-full bg-fuchsia-500/20 blur-[120px]" />
+
+<div className="absolute bottom-[-150px] left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px]" />
+
+ <div className="relative z-10">
 
       {/* Badge */}
 
@@ -12,13 +21,11 @@ function Hero() {
 
       {/* Heading */}
 
-      <h1 className="max-w-5xl text-6xl font-extrabold leading-tight text-white md:text-7xl">
-        One platform.
-        <br />
-        <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-300 bg-clip-text text-transparent">
-          Every tool you need.
-        </span>
-      </h1>
+     <h1 className="bg-gradient-to-r from-white via-violet-200 to-violet-500 bg-clip-text text-6xl font-extrabold leading-tight text-transparent md:text-7xl">
+  One platform.
+  <br />
+  Every tool you need.
+</h1>
 
       {/* Subtitle */}
 
@@ -37,6 +44,7 @@ function Hero() {
     Try AI Tools
   </button>
 <Stats />
+</div>
 </div>
     </section>
   );
