@@ -11,13 +11,13 @@ function Hero() {
 
 <div className="absolute bottom-[-150px] left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px]" />
 
- <div className="relative z-10">
+ <div className="relative z-10 mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
 
       {/* Badge */}
 
-      <div className="mb-8 rounded-full border border-violet-500/30 bg-violet-500/10 px-6 py-2 text-sm text-violet-300">
-        ✨ 40+ premium tools · AI-powered · Loved by students
-      </div>
+     <div className="mb-8 inline-flex items-center rounded-full border border-violet-500/30 bg-violet-500/10 px-5 py-2 text-sm text-violet-300 backdrop-blur-md">
+  ✨ 40+ Powerful Tools • Free • Fast • Secure
+</div>
 
       {/* Heading */}
 

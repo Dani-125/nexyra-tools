@@ -51,3 +51,10 @@ export const popularTools = [
     icon: FiClock,
   },
 ];
+export const mostUsedTools = [];
+
+export const pdfTools = [];
+
+export const imageTools = [];
+
+export const aiTools = [];
