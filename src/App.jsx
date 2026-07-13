@@ -1,3 +1,4 @@
+import Footer from "./components/layout/Footer";
 import Features from "./components/home/Features";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/hero/Hero";
@@ -12,6 +13,7 @@ function App() {
       <PopularTools />
       <AllTools />
       <Features/>
+      <Footer/>
     </div>
   );
 }
