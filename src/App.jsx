@@ -1,3 +1,4 @@
+import Categories from "./components/home/Categories";
 import Footer from "./components/layout/Footer";
 import Features from "./components/home/Features";
 import Navbar from "./components/layout/Navbar";
@@ -14,6 +15,7 @@ function App() {
       <AllTools />
       <Features/>
       <Footer/>
+      <Categories/>
     </div>
   );
 }

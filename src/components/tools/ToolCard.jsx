@@ -3,6 +3,9 @@ function ToolCard({ icon: Icon, title, description }) {
     <div
       className="
         group
+        flex
+        flex-col
+        min-h-[360px]
         rounded-2xl
         border
         border-slate-800
@@ -38,21 +41,12 @@ function ToolCard({ icon: Icon, title, description }) {
       </div>
 
       {/* Title */}
-      <h3
-        className="
-          text-xl
-          font-semibold
-          text-white
-          transition-colors
-          duration-300
-          group-hover:text-violet-400
-        "
-      >
+      <h3 className="text-2xl font-bold text-white transition-colors duration-300 group-hover:text-violet-400">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="mt-3 text-sm leading-6 text-slate-400">
+      <p className="mt-4 flex-grow text-slate-400 leading-7">
         {description}
       </p>
 
@@ -62,13 +56,17 @@ function ToolCard({ icon: Icon, title, description }) {
           mt-6
           w-full
           rounded-xl
-          bg-violet-600
+          bg-gradient-to-r
+          from-violet-600
+          to-purple-600
           py-3
-          font-medium
+          font-semibold
           text-white
           transition-all
           duration-300
-          hover:bg-violet-500
+          hover:scale-105
+          hover:shadow-lg
+          hover:shadow-violet-500/30
         "
       >
         Open Tool
