@@ -2,7 +2,7 @@ import Stats from "./Stats";
 import SearchBar from "./SearchBar";
 function Hero() {
   return (
-    <section className="relative overflow-hidden pb-32">
+  <section className="relative w-full overflow-hidden py-24">
 
         {/* Background Glow */}
 <div className="absolute left-[-150px] top-[-120px] h-[400px] w-[400px] rounded-full bg-violet-600/20 blur-[120px]" />
@@ -11,7 +11,7 @@ function Hero() {
 
 <div className="absolute bottom-[-150px] left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px]" />
 
- <div className="relative z-10 mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
+<div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center px-6 text-center">
 
       {/* Badge */}
 
@@ -35,7 +35,6 @@ function Hero() {
       </p>
 <SearchBar />
 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-
   <button className="rounded-xl bg-violet-600 px-8 py-4 font-semibold text-white transition duration-300 hover:scale-105 hover:bg-violet-500">
     Explore All Tools
   </button>
@@ -43,8 +42,9 @@ function Hero() {
   <button className="rounded-xl border border-slate-700 bg-slate-900 px-8 py-4 font-semibold text-slate-200 transition duration-300 hover:border-violet-500 hover:text-white">
     Try AI Tools
   </button>
-<Stats />
 </div>
+
+<Stats />
 </div>
     </section>
   );
