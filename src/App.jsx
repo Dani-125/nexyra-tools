@@ -1,63 +1,26 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/layout/Navbar";
-import Hero from "./components/hero/Hero";
-import PopularTools from "./components/tools/PopularTools";
-import Categories from "./components/home/Categories";
-import FeaturedAI from "./components/home/FeaturedAI";
-import AllTools from "./components/tools/AllTools";
-import Features from "./components/home/Features";
-import Footer from "./components/layout/Footer";
-
-import { popularTools, allTools } from "./data/tools";
+import Home from "./pages/Home";
+import PDFTools from "./pages/PDFTools";
+import ImageTools from "./pages/ImageTools";
+import AITools from "./pages/AITools";
+import StudentTools from "./pages/StudentTools";
+import NotFound from "./pages/NotFound";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const searchResults = allTools.filter((tool) => {
-    const query = searchTerm.toLowerCase();
-
-    return (
-      tool.title.toLowerCase().includes(query) ||
-      (tool.category && tool.category.toLowerCase().includes(query)) ||
-      tool.description.toLowerCase().includes(query)
-    );
-  });
-
-  const filteredPopularTools = popularTools.filter((tool) => {
-    const query = searchTerm.toLowerCase();
-
-    return (
-      tool.title.toLowerCase().includes(query) ||
-      tool.description.toLowerCase().includes(query) ||
-      tool.category.toLowerCase().includes(query)
-    );
-  });
-
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <Navbar />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-      <main>
-        <Hero
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          searchResults={searchResults}
-        />
+        <Route path="/tools/pdf" element={<PDFTools />} />
+        <Route path="/tools/image" element={<ImageTools />} />
+        <Route path="/tools/ai" element={<AITools />} />
+        <Route path="/tools/student" element={<StudentTools />} />
 
-        <PopularTools tools={filteredPopularTools} />
-
-        <Categories />
-
-        <FeaturedAI />
-
-        <AllTools />
-
-        <Features />
-      </main>
-
-      <Footer />
-    </div>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
