@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/hero/Hero";
 import PopularTools from "./components/tools/PopularTools";
@@ -7,17 +9,50 @@ import AllTools from "./components/tools/AllTools";
 import Features from "./components/home/Features";
 import Footer from "./components/layout/Footer";
 
+import { popularTools, allTools } from "./data/tools";
+
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const searchResults = allTools.filter((tool) => {
+    const query = searchTerm.toLowerCase();
+
+    return (
+      tool.title.toLowerCase().includes(query) ||
+      (tool.category && tool.category.toLowerCase().includes(query)) ||
+      tool.description.toLowerCase().includes(query)
+    );
+  });
+
+  const filteredPopularTools = popularTools.filter((tool) => {
+    const query = searchTerm.toLowerCase();
+
+    return (
+      tool.title.toLowerCase().includes(query) ||
+      tool.description.toLowerCase().includes(query) ||
+      tool.category.toLowerCase().includes(query)
+    );
+  });
+
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Navbar />
 
       <main>
-        <Hero />
-        <PopularTools />
+        <Hero
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          searchResults={searchResults}
+        />
+
+        <PopularTools tools={filteredPopularTools} />
+
         <Categories />
+
         <FeaturedAI />
+
         <AllTools />
+
         <Features />
       </main>
 

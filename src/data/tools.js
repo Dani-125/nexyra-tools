@@ -160,3 +160,10 @@ export const studentTools = [
     icon: FiGrid,
   },
 ];
+export const allTools = [
+  ...popularTools,
+  ...pdfTools,
+  ...imageTools,
+  ...aiTools,
+  ...studentTools,
+];
